@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://ymykqc7nlwo4"]
+
+[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Battle Script/Chara/Character.gd" id="1_wglgy"]
+[ext_resource type="Script" uid="uid://cihkpss2aika3" path="res://Battle Script/Skill/ATK.gd" id="2_2vv28"]
+[ext_resource type="Script" uid="uid://vxpy2qefguti" path="res://Battle Script/Skill/SKnightSlash.gd" id="3_na76r"]
+[ext_resource type="Script" uid="uid://ctpbi6tk25pml" path="res://Battle Script/Skill/SKnightSpirit.gd" id="4_6lvb1"]
+[ext_resource type="Script" uid="uid://bqdk5tqne76pn" path="res://Battle Script/Skill/SKnightThrust.gd" id="5_hjxry"]
+[ext_resource type="Script" uid="uid://busvllwro2p0e" path="res://Battle Script/Skill/Wait.gd" id="6_iq4yj"]
+
+[node name="Character" type="Sprite2D" node_paths=PackedStringArray("Skills")]
+script = ExtResource("1_wglgy")
+Skills = [NodePath("ATK"), NodePath("Wait"), NodePath("SKSl"), NodePath("SKSp"), NodePath("SKT")]
+metadata/_custom_type_script = "uid://cgb6hj7dc7pf0"
+
+[node name="ATK" type="Node" parent="." node_paths=PackedStringArray("Chara")]
+script = ExtResource("2_2vv28")
+Chara = NodePath("..")
+
+[node name="SKSl" type="Node" parent="." node_paths=PackedStringArray("Chara")]
+script = ExtResource("3_na76r")
+Chara = NodePath("..")
+
+[node name="SKSp" type="Node" parent="." node_paths=PackedStringArray("Chara")]
+script = ExtResource("4_6lvb1")
+Chara = NodePath("..")
+
+[node name="SKT" type="Node" parent="." node_paths=PackedStringArray("Chara")]
+script = ExtResource("5_hjxry")
+Chara = NodePath("..")
+
+[node name="Wait" type="Node" parent="." node_paths=PackedStringArray("Chara")]
+script = ExtResource("6_iq4yj")
+Chara = NodePath("..")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvu8mbagr2364"]
+
+[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Battle Script/Chara/Character.gd" id="1_jfdcj"]
+
+[node name="Character" type="Sprite2D"]
+script = ExtResource("1_jfdcj")
+metadata/_custom_type_script = "uid://cgb6hj7dc7pf0"

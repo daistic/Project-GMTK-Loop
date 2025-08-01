@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://s00cg30y10kn"]
+
+[ext_resource type="Script" uid="uid://bay7qpoc1afgm" path="res://Battle Script/BBattlePU.gd" id="1_t1h3k"]
+[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Ucup/Screenshot 2025-05-22 211705.png" id="2_rt0ji"]
+[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Battle Script/Chara/Character.gd" id="3_55055"]
+[ext_resource type="Script" uid="uid://cb6bfiefccfd2" path="res://Battle Script/GoBattle.gd" id="4_l003q"]
+
+[node name="before battle pop up" type="Node2D" node_paths=PackedStringArray("GB")]
+script = ExtResource("1_t1h3k")
+GB = NodePath("Node")
+
+[node name="Character" type="Sprite2D" parent="."]
+position = Vector2(727, 331)
+scale = Vector2(0.409856, 1)
+texture = ExtResource("2_rt0ji")
+script = ExtResource("3_55055")
+metadata/_custom_type_script = "uid://cgb6hj7dc7pf0"
+
+[node name="Character2" type="Sprite2D" parent="."]
+position = Vector2(400, 329)
+scale = Vector2(0.394231, 1)
+texture = ExtResource("2_rt0ji")
+script = ExtResource("3_55055")
+metadata/_custom_type_script = "uid://cgb6hj7dc7pf0"
+
+[node name="Character3" type="Sprite2D" parent="."]
+position = Vector2(124, 329)
+scale = Vector2(0.346154, 1)
+texture = ExtResource("2_rt0ji")
+script = ExtResource("3_55055")
+metadata/_custom_type_script = "uid://cgb6hj7dc7pf0"
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("4_l003q")
