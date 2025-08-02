@@ -1,9 +1,13 @@
-extends Node
+extends Node2D
 @export var GB:Node
 var Characters:Array[Character]
+@export var stat:Array[Label]
+var format="ATK: %d \nDEF: %d \nHP: %d \nMana: %d"
 func _enter_tree() -> void:
 	GB.battle_popup.connect(_battle_popup)
+	visible=false
 func _battle_popup(chara):
 	Characters=chara
-	for a in chara:
-		print(a.type)
+	visible=true
+	for a in stat.size():
+		stat[a].text=format % [Characters[a].atk,Characters[a].def,Characters[a].hp,Characters[a].mana]

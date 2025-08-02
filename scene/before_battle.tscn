@@ -1,34 +1,74 @@
-[gd_scene load_steps=5 format=3 uid="uid://s00cg30y10kn"]
+[gd_scene load_steps=7 format=3 uid="uid://s00cg30y10kn"]
 
+[ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Ucup/Screenshot 2025-08-02 001149.png" id="1_c1k8x"]
 [ext_resource type="Script" uid="uid://bay7qpoc1afgm" path="res://Battle Script/BBattlePU.gd" id="1_t1h3k"]
-[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Ucup/Screenshot 2025-05-22 211705.png" id="2_rt0ji"]
-[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Battle Script/Chara/Character.gd" id="3_55055"]
+[ext_resource type="FontFile" uid="uid://br3p57tef348l" path="res://Roboto_Condensed-Black.ttf" id="3_rt0ji"]
+[ext_resource type="PackedScene" uid="uid://ymykqc7nlwo4" path="res://Scenes/Chara/Knight.tscn" id="3_t1h3k"]
 [ext_resource type="Script" uid="uid://cb6bfiefccfd2" path="res://Battle Script/GoBattle.gd" id="4_l003q"]
 
-[node name="before battle pop up" type="Node2D" node_paths=PackedStringArray("GB")]
+[sub_resource type="LabelSettings" id="LabelSettings_55055"]
+font = ExtResource("3_rt0ji")
+font_size = 3
+font_color = Color(0, 0, 0, 1)
+
+[node name="before battle pop up" type="Node2D" node_paths=PackedStringArray("GB", "stat")]
 script = ExtResource("1_t1h3k")
-GB = NodePath("Node")
+GB = NodePath("temp")
+stat = [NodePath("BG/Label"), NodePath("BG/Label2"), NodePath("BG/Label3")]
 
-[node name="Character" type="Sprite2D" parent="."]
-position = Vector2(727, 331)
-scale = Vector2(0.409856, 1)
-texture = ExtResource("2_rt0ji")
-script = ExtResource("3_55055")
-metadata/_custom_type_script = "uid://cgb6hj7dc7pf0"
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(669.5, 336.75)
+scale = Vector2(7.2, 4.458)
+texture = ExtResource("1_c1k8x")
 
-[node name="Character2" type="Sprite2D" parent="."]
-position = Vector2(400, 329)
-scale = Vector2(0.394231, 1)
-texture = ExtResource("2_rt0ji")
-script = ExtResource("3_55055")
-metadata/_custom_type_script = "uid://cgb6hj7dc7pf0"
+[node name="Label" type="Label" parent="BG"]
+offset_left = -67.892
+offset_top = -60.0
+offset_right = -27.892
+offset_bottom = -36.75
+text = "ATK:
+DEF:
+HP:
+Mana:"
+label_settings = SubResource("LabelSettings_55055")
 
-[node name="Character3" type="Sprite2D" parent="."]
-position = Vector2(124, 329)
-scale = Vector2(0.346154, 1)
-texture = ExtResource("2_rt0ji")
-script = ExtResource("3_55055")
-metadata/_custom_type_script = "uid://cgb6hj7dc7pf0"
+[node name="Label2" type="Label" parent="BG"]
+offset_left = -20.739
+offset_top = -60.0
+offset_right = 19.261
+offset_bottom = -36.75
+text = "ATK:
+DEF:
+HP:
+Mana:"
+label_settings = SubResource("LabelSettings_55055")
 
-[node name="Node" type="Node" parent="."]
+[node name="Label3" type="Label" parent="BG"]
+offset_left = 30.332
+offset_top = -60.0
+offset_right = 70.332
+offset_bottom = -30.0
+text = "ATK:
+DEF:
+HP:
+Mana:"
+label_settings = SubResource("LabelSettings_55055")
+
+[node name="temp" type="Node" parent="." node_paths=PackedStringArray("chara")]
 script = ExtResource("4_l003q")
+chara = [NodePath("Knight"), NodePath("Knight/Knight"), NodePath("Knight/Knight/Knight")]
+
+[node name="Knight" parent="temp" instance=ExtResource("3_t1h3k")]
+visible = false
+position = Vector2(404.293, 172.874)
+scale = Vector2(1.724, 1)
+
+[node name="Knight" parent="temp/Knight" instance=ExtResource("3_t1h3k")]
+visible = false
+position = Vector2(404.293, 172.874)
+scale = Vector2(1.724, 1)
+
+[node name="Knight" parent="temp/Knight/Knight" instance=ExtResource("3_t1h3k")]
+visible = false
+position = Vector2(404.293, 172.874)
+scale = Vector2(1.724, 1)
