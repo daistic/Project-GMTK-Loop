@@ -1,4 +1,7 @@
-class_name Character extends Sprite2D
+class_name Character 
+
+extends Sprite2D
+
 @export var Skills:Array[Skill]
 var type="normal"
 var atk=1
