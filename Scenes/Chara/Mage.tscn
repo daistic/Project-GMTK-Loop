@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfofcpqh7t5wv"]
-
-[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Battle Script/Chara/Character.gd" id="1_ef0nl"]
-[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Ucup/Screenshot 2025-05-22 211705.png" id="1_qhakq"]
-
-[node name="Mage" type="Sprite2D"]
-texture = ExtResource("1_qhakq")
-script = ExtResource("1_ef0nl")
-metadata/_custom_type_script = "uid://cgb6hj7dc7pf0"
