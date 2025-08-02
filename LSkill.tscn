@@ -1,0 +1,154 @@
+[gd_scene load_steps=6 format=3 uid="uid://dp4deoyryx0ic"]
+
+[ext_resource type="Script" uid="uid://b0w1ske2f6qs6" path="res://LoopSkill.gd" id="1_idilx"]
+[ext_resource type="Texture2D" uid="uid://ddcnl5brlsv0a" path="res://Ucup/Screenshot 2025-08-02 134929.png" id="1_sa3se"]
+[ext_resource type="FontFile" uid="uid://br3p57tef348l" path="res://Roboto_Condensed-Black.ttf" id="3_ajugq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pq3d2"]
+font = ExtResource("3_ajugq")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j1cut"]
+font = ExtResource("3_ajugq")
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("skill_name", "cost_label", "sprite")]
+position = Vector2(0, 100)
+script = ExtResource("1_idilx")
+skill_name = NodePath("Label")
+cost_label = NodePath("Label2")
+sprite = NodePath("Screenshot2025-08-02134929")
+
+[node name="Screenshot2025-08-02134929" type="Sprite2D" parent="."]
+position = Vector2(178, 33)
+texture = ExtResource("1_sa3se")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Skill"
+label_settings = SubResource("LabelSettings_pq3d2")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 42.0
+offset_right = 41.0
+offset_bottom = 65.0
+text = "Mana"
+label_settings = SubResource("LabelSettings_j1cut")
+metadata/_edit_use_anchors_ = true
+
+[node name="Add up" type="Button" parent="."]
+offset_left = 232.0
+offset_top = 4.0
+offset_right = 267.0
+offset_bottom = 29.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Add up"]
+offset_right = 57.0
+offset_bottom = 41.0
+scale = Vector2(0.61, 0.61)
+text = "Add Up"
+label_settings = SubResource("LabelSettings_pq3d2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Add bottom" type="Button" parent="."]
+offset_left = 232.0
+offset_top = 34.0
+offset_right = 267.0
+offset_bottom = 59.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Add bottom"]
+offset_right = 58.0
+offset_bottom = 41.0
+scale = Vector2(0.62, 0.62)
+text = "Add down"
+label_settings = SubResource("LabelSettings_pq3d2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="delete" type="Button" parent="."]
+offset_left = 317.0
+offset_top = 34.0
+offset_right = 352.0
+offset_bottom = 59.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="delete"]
+offset_right = 47.0
+offset_bottom = 35.0
+scale = Vector2(0.74, 0.74)
+text = "Delete"
+label_settings = SubResource("LabelSettings_pq3d2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="move down" type="Button" parent="."]
+offset_left = 273.0
+offset_top = 34.0
+offset_right = 308.0
+offset_bottom = 59.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="move down"]
+offset_right = 58.0
+offset_bottom = 41.0
+scale = Vector2(0.605, 0.605)
+text = "Move Down"
+label_settings = SubResource("LabelSettings_pq3d2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="move up" type="Button" parent="."]
+offset_left = 273.0
+offset_top = 4.0
+offset_right = 308.0
+offset_bottom = 29.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="move up"]
+offset_right = 58.0
+offset_bottom = 41.0
+scale = Vector2(0.605, 0.605)
+text = "Move Up"
+label_settings = SubResource("LabelSettings_pq3d2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="edit" type="Button" parent="."]
+offset_left = 317.0
+offset_top = 4.0
+offset_right = 352.0
+offset_bottom = 29.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="edit"]
+offset_right = 35.0
+offset_bottom = 25.0
+text = "Edit"
+label_settings = SubResource("LabelSettings_pq3d2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Add up" to="." method="_on_add_up_pressed"]
+[connection signal="pressed" from="Add bottom" to="." method="_on_add_bottom_pressed"]
+[connection signal="pressed" from="delete" to="." method="_on_delete_pressed"]
+[connection signal="pressed" from="move down" to="." method="_on_move_down_pressed"]
+[connection signal="pressed" from="move up" to="." method="_on_move_up_pressed"]
+[connection signal="pressed" from="edit" to="." method="_on_edit_pressed"]
