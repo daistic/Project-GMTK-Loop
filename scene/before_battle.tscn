@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Ucup/Screenshot 2025-08-02 001149.png" id="1_c1k8x"]
 [ext_resource type="Script" uid="uid://bay7qpoc1afgm" path="res://Battle Script/BBattlePU.gd" id="1_t1h3k"]
 [ext_resource type="LabelSettings" uid="uid://c33kgvyka2is0" path="res://new_label_settings.tres" id="3_55055"]
-[ext_resource type="PackedScene" uid="uid://ymykqc7nlwo4" path="res://Scenes/Chara/Knight.tscn" id="3_t1h3k"]
-[ext_resource type="PackedScene" uid="uid://cya7iuagbb63o" path="res://Scroll.tscn" id="4_55055"]
+[ext_resource type="PackedScene" uid="uid://b6xanuf3dj8yr" path="res://Scenes/Chara/Knight.tscn" id="3_t1h3k"]
+[ext_resource type="PackedScene" uid="uid://cya7iuagbb63o" path="res://node(f) base/Scroll.tscn" id="4_55055"]
 [ext_resource type="Script" uid="uid://cb6bfiefccfd2" path="res://Battle Script/GoBattle.gd" id="4_l003q"]
 
 [node name="before battle pop up" type="Node2D" node_paths=PackedStringArray("GB", "stat", "skillscore")]

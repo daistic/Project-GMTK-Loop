@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dxm3s4b6ch80n"]
+
+[ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Ucup/Screenshot 2025-08-02 001149.png" id="1_qjfwr"]
+[ext_resource type="Texture2D" uid="uid://ddcnl5brlsv0a" path="res://Ucup/Screenshot 2025-08-02 134929.png" id="2_nkfbh"]
+[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Ucup/Screenshot 2025-05-22 211705.png" id="3_kaw7x"]
+[ext_resource type="Script" uid="uid://e1cg1h0u5tib" path="res://SkillEdit.gd" id="4_55vdt"]
+[ext_resource type="LabelSettings" uid="uid://da8vroblsimmc" path="res://button.tres" id="4_kaw7x"]
+
+[node name="TextureButton" type="TextureButton" node_paths=PackedStringArray("skill_name", "cost_label")]
+custom_minimum_size = Vector2(0, 30)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_qjfwr")
+texture_pressed = ExtResource("2_nkfbh")
+texture_hover = ExtResource("3_kaw7x")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_55vdt")
+skill_name = NodePath("Label")
+cost_label = NodePath("Label2")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "S"
+label_settings = ExtResource("4_kaw7x")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "M"
+label_settings = ExtResource("4_kaw7x")
+vertical_alignment = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

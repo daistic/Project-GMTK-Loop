@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasItem
 @export var GB:Node
 var Characters:Array[Character]
 @export var stat:Array[Label]
