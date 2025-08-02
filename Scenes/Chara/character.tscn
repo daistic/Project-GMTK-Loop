@@ -11,7 +11,7 @@ position = Vector2(124, 427)
 scale = Vector2(0.374399, 1)
 texture = ExtResource("1_wa5vi")
 script = ExtResource("2_wfnr8")
-Skills = [NodePath("SKnightSlash"), NodePath("")]
+Skills = [NodePath("SKnightSlash"), null]
 
 [node name="SKnightSlash" type="Node" parent="Screenshot2025-05-22211705"]
 script = ExtResource("3_px5sl")
