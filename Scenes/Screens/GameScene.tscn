@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cx5sc3vfrsvvh"]
+[gd_scene load_steps=13 format=3 uid="uid://cx5sc3vfrsvvh"]
 
 [ext_resource type="Script" uid="uid://ko6bmyhc5piv" path="res://Scripts/Misc/GameScene.gd" id="1_5iq2x"]
 [ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Assets/Textures/Screenshot 2025-08-02 001149.png" id="1_28646"]
 [ext_resource type="LabelSettings" uid="uid://cxitxq60d3cta" path="res://Resources/Black_35.tres" id="2_5iq2x"]
 [ext_resource type="PackedScene" uid="uid://lww55f3sv47b" path="res://Scenes/Misc/GameCharaButton.tscn" id="3_5iq2x"]
 [ext_resource type="PackedScene" uid="uid://dhksfivwid2n0" path="res://Scenes/Misc/UmaMusumeButton.tscn" id="4_n715t"]
+[ext_resource type="Texture2D" uid="uid://btq3l05sryjxk" path="res://Assets/Textures/background.png" id="4_qivhw"]
 [ext_resource type="Texture2D" uid="uid://ijv61jeyd2rd" path="res://Assets/Textures/Attack.png" id="6_ii0cj"]
 [ext_resource type="Texture2D" uid="uid://wb7sbqq1ya1y" path="res://Assets/Textures/Defense.png" id="7_qivhw"]
 [ext_resource type="Texture2D" uid="uid://81pt2dslbcil" path="res://Assets/Textures/HP.png" id="8_1lhtn"]
@@ -70,6 +71,7 @@ text = "HP"
 label_settings = ExtResource("2_5iq2x")
 
 [node name="HPBar" type="TextureProgressBar" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/HPContainer"]
+self_modulate = Color(0.756863, 0, 0.0156863, 1)
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -88,6 +90,7 @@ text = "EN"
 label_settings = ExtResource("2_5iq2x")
 
 [node name="EnergyBar" type="TextureProgressBar" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/EnergyContainer"]
+self_modulate = Color(0.565382, 1, 0.749294, 1)
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -105,7 +108,8 @@ self_modulate = Color(0.321241, 0.290906, 0.201593, 1)
 custom_minimum_size = Vector2(625, 325)
 layout_mode = 2
 size_flags_vertical = 4
-texture = ExtResource("1_28646")
+texture = ExtResource("4_qivhw")
+expand_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen"]
 layout_mode = 1

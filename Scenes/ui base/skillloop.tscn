@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dc7rym1bsnw6c"]
+[gd_scene load_steps=7 format=3 uid="uid://dc7rym1bsnw6c"]
 
 [ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Assets/Textures/Screenshot 2025-08-02 001149.png" id="1_rdqbe"]
-[ext_resource type="LabelSettings" path="res://Resources/Skillname.tres" id="2_cuq1h"]
+[ext_resource type="LabelSettings" uid="uid://b8401s27ryjpf" path="res://Resources/Skillname.tres" id="2_cuq1h"]
 [ext_resource type="Script" uid="uid://b0w1ske2f6qs6" path="res://Scripts/Battle/LoopSkill.gd" id="2_o1ytc"]
 [ext_resource type="Texture2D" uid="uid://ddcnl5brlsv0a" path="res://Assets/Textures/Screenshot 2025-08-02 134929.png" id="3_2y6h0"]
-[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Assets/Textures/Screenshot 2025-05-22 211705.png" id="4_mnrlg"]
-[ext_resource type="LabelSettings" uid="uid://bh3chi5s80w7q" path="res://Resources/button.tres" id="5_pnod4"]
+[ext_resource type="LabelSettings" uid="uid://da8vroblsimmc" path="res://Resources/button.tres" id="5_pnod4"]
 [ext_resource type="PackedScene" uid="uid://dxm3s4b6ch80n" path="res://Scenes/ui base/skill_edit.tscn" id="7_qgi4a"]
 
 [node name="TextureRect" type="TextureRect" node_paths=PackedStringArray("skill_name", "cost_label", "container", "ctrl", "ctrl1")]
@@ -73,7 +72,6 @@ offset_top = 0.00799942
 offset_bottom = 0.0119972
 texture_normal = ExtResource("3_2y6h0")
 texture_pressed = ExtResource("1_rdqbe")
-texture_hover = ExtResource("4_mnrlg")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -102,7 +100,6 @@ offset_top = -0.012001
 offset_bottom = -0.00801086
 texture_normal = ExtResource("3_2y6h0")
 texture_pressed = ExtResource("1_rdqbe")
-texture_hover = ExtResource("4_mnrlg")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -132,7 +129,6 @@ offset_right = -1.52588e-05
 offset_bottom = 0.0119972
 texture_normal = ExtResource("3_2y6h0")
 texture_pressed = ExtResource("1_rdqbe")
-texture_hover = ExtResource("4_mnrlg")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -162,7 +158,6 @@ offset_right = -1.52588e-05
 offset_bottom = -0.00801086
 texture_normal = ExtResource("3_2y6h0")
 texture_pressed = ExtResource("1_rdqbe")
-texture_hover = ExtResource("4_mnrlg")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -191,7 +186,6 @@ offset_top = 0.00799942
 offset_bottom = 0.0119972
 texture_normal = ExtResource("3_2y6h0")
 texture_pressed = ExtResource("1_rdqbe")
-texture_hover = ExtResource("4_mnrlg")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -220,7 +214,6 @@ offset_top = -0.012001
 offset_bottom = -0.00801086
 texture_normal = ExtResource("3_2y6h0")
 texture_pressed = ExtResource("1_rdqbe")
-texture_hover = ExtResource("4_mnrlg")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -278,7 +271,6 @@ offset_top = 0.00799942
 offset_bottom = 0.0119972
 texture_normal = ExtResource("3_2y6h0")
 texture_pressed = ExtResource("1_rdqbe")
-texture_hover = ExtResource("4_mnrlg")
 ignore_texture_size = true
 stretch_mode = 0
 
