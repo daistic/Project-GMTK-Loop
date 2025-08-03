@@ -4,6 +4,7 @@ var hp=1
 var atk=1
 var def=1
 var alive=true
+
 func next_move():
 	pass
 func take_damage(amount: float, pen: float = 0):
