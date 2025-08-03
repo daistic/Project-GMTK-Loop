@@ -1,8 +1,15 @@
 class_name Character 
 extends Node
+
+enum TYPE {
+	KNIGHT,
+	MAGE,
+	TANK
+}
+
 @export var Skills:Array[Skill]
 @export var texture:Texture
-var type="normal"
+var type: TYPE = TYPE.KNIGHT
 var atk=1
 var def=1
 var hp=1

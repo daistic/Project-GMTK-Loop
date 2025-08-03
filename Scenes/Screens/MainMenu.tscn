@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dna36yr73bjn0"]
+[gd_scene load_steps=7 format=3 uid="uid://dna36yr73bjn0"]
 
 [ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Assets/Textures/Screenshot 2025-08-02 001149.png" id="1_a1jv6"]
 [ext_resource type="Script" uid="uid://d2qud85tqbmim" path="res://Scripts/Misc/MainMenu.gd" id="1_f35bi"]
 [ext_resource type="FontFile" uid="uid://br3p57tef348l" path="res://Assets/Font Asset/Roboto_Condensed-Black.ttf" id="2_f35bi"]
 [ext_resource type="LabelSettings" uid="uid://cxitxq60d3cta" path="res://Resources/Black_35.tres" id="3_441x2"]
+[ext_resource type="PackedScene" uid="uid://bfbmmbfdh0sa8" path="res://Scenes/Misc/CharacterSelect.tscn" id="4_441x2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8um5k"]
 font = ExtResource("2_f35bi")
@@ -61,6 +62,25 @@ self_modulate = Color(0.587425, 0.504616, 0.299648, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("1_a1jv6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterSelect" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/HBoxContainer" instance=ExtResource("4_441x2")]
+layout_mode = 2
+
+[node name="CharacterSelect2" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/HBoxContainer" instance=ExtResource("4_441x2")]
+layout_mode = 2
+selection_index = 1
+
+[node name="CharacterSelect3" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/HBoxContainer" instance=ExtResource("4_441x2")]
+layout_mode = 2
+selection_index = 2
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
