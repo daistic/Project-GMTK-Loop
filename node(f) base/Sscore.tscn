@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ksqww8qt772t"]
 
-[ext_resource type="Script" uid="uid://blrckn2cmu4c6" path="res://SkillScroll.gd" id="1_i3ucu"]
-[ext_resource type="PackedScene" uid="uid://dp4deoyryx0ic" path="res://LSkill.tscn" id="2_iifgw"]
+[ext_resource type="Script" uid="uid://blrckn2cmu4c6" path="res://SkillScroll.gd" id="1_v0t2w"]
+[ext_resource type="PackedScene" uid="uid://dp4deoyryx0ic" path="res://node(f) base/LSkill.tscn" id="2_v811h"]
 
 [sub_resource type="Theme" id="Theme_iifgw"]
 
@@ -10,10 +10,9 @@
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_63hfw"]
 gradient = SubResource("Gradient_sgeto")
 
-[node name="SkillScore" type="Node" node_paths=PackedStringArray("view_port")]
-script = ExtResource("1_i3ucu")
-LSkill = ExtResource("2_iifgw")
-view_port = NodePath("ScrollContainer/SubViewportContainer/SubViewport")
+[node name="SkillScore" type="Node"]
+script = ExtResource("1_v0t2w")
+LSkill = ExtResource("2_v811h")
 metadata/_custom_type_script = "uid://blrckn2cmu4c6"
 
 [node name="Button" type="Button" parent="."]

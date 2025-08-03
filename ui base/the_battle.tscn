@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhfevpfkgtaq2"]
+
+[ext_resource type="Script" uid="uid://5nwiim3sps4k" path="res://TheBattle.gd" id="1_4p0bh"]
+[ext_resource type="Texture2D" uid="uid://ddcnl5brlsv0a" path="res://Ucup/Screenshot 2025-08-02 134929.png" id="1_t7d2g"]
+[ext_resource type="Script" uid="uid://bool26hswiman" path="res://Enemy.gd" id="2_k410v"]
+[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://chara/Character.gd" id="4_4p0bh"]
+
+[node name="The Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4p0bh")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_t7d2g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 69
+
+[node name="Enemy" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+stretch_mode = 5
+script = ExtResource("2_k410v")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Chara1" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("4_4p0bh")
+
+[node name="Chara2" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("4_4p0bh")
+
+[node name="Chara3" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("4_4p0bh")

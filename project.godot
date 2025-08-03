@@ -11,14 +11,15 @@ config_version=5
 [application]
 
 config/name="Loop"
-run/main_scene="uid://s00cg30y10kn"
+run/main_scene="uid://bwnsd3fctr0oe"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
+Global="*res://Globals/global.gd"
 CharacterManager="*res://Globals/CharacterManager.gd"
-Global="*res://Globals/Global.gd"
+BattleManager="*res://Globals/BattleManager.gd"
 
 [display]
 
