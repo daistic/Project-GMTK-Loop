@@ -12,10 +12,11 @@ enum TYPE {
 var type: TYPE = TYPE.KNIGHT
 var atk=1
 var def=1
-var hp=1
+var hp: int = 100
+var energy: int = 100
 var mana=1
 var agro=1
-var cur_hp=1
+var cur_hp=100
 var cur_mana=1
 var tactic_loop:Array[int]
 var c_skill=0
