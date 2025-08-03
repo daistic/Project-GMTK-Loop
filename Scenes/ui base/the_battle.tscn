@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhfevpfkgtaq2"]
+[gd_scene load_steps=7 format=3 uid="uid://bhfevpfkgtaq2"]
 
 [ext_resource type="Script" uid="uid://5nwiim3sps4k" path="res://Scripts/Battle/TheBattle.gd" id="1_4p0bh"]
 [ext_resource type="Texture2D" uid="uid://cpsconrheihel" path="res://Assets/Textures/backgroundBossfight.png" id="2_hiwjl"]
 [ext_resource type="Script" uid="uid://bool26hswiman" path="res://Scripts/Classes/Enemy.gd" id="2_k410v"]
+[ext_resource type="Texture2D" uid="uid://bk3s56nu53qsf" path="res://Assets/Textures/DragonFinalBoss.png" id="3_2x21i"]
 [ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Scripts/Classes/Character.gd" id="4_4p0bh"]
+[ext_resource type="Texture2D" uid="uid://7i3wemno7wxg" path="res://Assets/Textures/Knight.png" id="5_fn4xb"]
 
 [node name="The Battle" type="Control" node_paths=PackedStringArray("chara_tex", "enemy_tex")]
 layout_mode = 3
@@ -33,18 +35,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 69
+alignment = 1
 
 [node name="Enemy" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
-stretch_mode = 5
+texture = ExtResource("3_2x21i")
+stretch_mode = 3
 script = ExtResource("2_k410v")
+texture = ExtResource("3_2x21i")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
 [node name="Chara1" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("5_fn4xb")
 script = ExtResource("4_4p0bh")
+texture = ExtResource("5_fn4xb")
 
 [node name="Chara2" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -52,4 +59,6 @@ script = ExtResource("4_4p0bh")
 
 [node name="Chara3" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("5_fn4xb")
 script = ExtResource("4_4p0bh")
+texture = ExtResource("5_fn4xb")
