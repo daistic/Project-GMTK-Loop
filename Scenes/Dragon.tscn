@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://7daqv0wm6b22"]
+
+[ext_resource type="Texture2D" uid="uid://bk3s56nu53qsf" path="res://Assets/Textures/DragonFinalBoss.png" id="1_0snye"]
+[ext_resource type="Script" uid="uid://bool26hswiman" path="res://Scripts/Classes/Enemy.gd" id="1_st5ui"]
+
+[node name="Dragon" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_0snye")
+script = ExtResource("1_st5ui")
+texture = ExtResource("1_0snye")

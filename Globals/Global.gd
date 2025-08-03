@@ -5,13 +5,14 @@ var chara:Array[Character] = [
 	Character.new(),
 	Character.new()
 ]
-var enemy:Enemy
+var enemy=preload("res://Scenes/Dragon.tscn").instantiate()
+
 signal battle_popup(charas:Array[Character])
 func pop_up():
 	battle_popup.emit(chara)
 signal battle_start(charas:Array[Character],enemy:Enemy)
 func  battle():
-	battle_start.emit(chara)
+	battle_start.emit(chara,enemy)
 signal battle_end(result:bool)
 
 const ATK = preload("res://Scripts/Skills/Base/ATK.gd")

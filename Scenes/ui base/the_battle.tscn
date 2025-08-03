@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://bhfevpfkgtaq2"]
 
 [ext_resource type="Script" uid="uid://5nwiim3sps4k" path="res://Scripts/Battle/TheBattle.gd" id="1_4p0bh"]
-[ext_resource type="Texture2D" uid="uid://ddcnl5brlsv0a" path="res://Assets/Textures/Screenshot 2025-08-02 134929.png" id="1_t7d2g"]
+[ext_resource type="Texture2D" uid="uid://cpsconrheihel" path="res://Assets/Textures/backgroundBossfight.png" id="2_hiwjl"]
 [ext_resource type="Script" uid="uid://bool26hswiman" path="res://Scripts/Classes/Enemy.gd" id="2_k410v"]
 [ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Scripts/Classes/Character.gd" id="4_4p0bh"]
 
-[node name="The Battle" type="Control"]
+[node name="The Battle" type="Control" node_paths=PackedStringArray("chara_tex", "enemy_tex")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +13,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4p0bh")
+chara_tex = [NodePath("VBoxContainer/HBoxContainer/Chara1"), NodePath("VBoxContainer/HBoxContainer/Chara2"), NodePath("VBoxContainer/HBoxContainer/Chara3")]
+enemy_tex = NodePath("VBoxContainer/Enemy")
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 1
@@ -21,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_t7d2g")
+texture = ExtResource("2_hiwjl")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

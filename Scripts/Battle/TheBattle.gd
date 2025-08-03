@@ -1,7 +1,7 @@
 extends Node
-var chara_tex:Array[Texture2D]
+@export var chara_tex:Array[TextureRect]
 var charas:Array[Character]
-var enemy_tex:Texture2D
+@export var enemy_tex:TextureRect
 var enemy:Enemy
 var battling:bool
 var ori_chara:Array[Character]
@@ -18,9 +18,10 @@ func _battle_start(chara:Array[Character],ienemy):
 	charas=chara.duplicate()
 	ori_chara=chara
 	for i in charas.size():
-		chara_tex[i].set_texture(charas[i].texture)
+		chara_tex[i].texture=charas[i].texture
 		chara[i].cur_mana=chara[i].mana
 	enemy=ienemy
+	enemy_tex.texture=enemy.texture
 	battling=true
 	while battling:
 		while wait:
