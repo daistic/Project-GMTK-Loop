@@ -1,5 +1,4 @@
 extends Control
 
 func _on_play_button_pressed() -> void:
-	for char in Global.chara:
-		print(char.type)
+	get_tree().change_scene_to_packed(GameManager.GAME_SCENE)

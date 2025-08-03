@@ -14,7 +14,7 @@ offset_bottom = -0.32
 texture = ExtResource("1_fgq7a")
 stretch_mode = 4
 script = ExtResource("1_m3mxj")
-Skills = [NodePath("Node"), NodePath("Node2")]
+Skills = [null, null]
 texture = ExtResource("1_fgq7a")
 
 [node name="Node" type="Node" parent="." node_paths=PackedStringArray("Chara")]

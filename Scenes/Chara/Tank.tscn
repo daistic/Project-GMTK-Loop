@@ -16,7 +16,7 @@ grow_vertical = 2
 texture = ExtResource("1_cs14v")
 stretch_mode = 4
 script = ExtResource("1_71xmh")
-Skills = [NodePath("Node"), NodePath("Node2")]
+Skills = [NodePath("Node"), null]
 texture = ExtResource("1_cs14v")
 
 [node name="Node" type="Node" parent="."]
