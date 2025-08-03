@@ -20,9 +20,18 @@ func _enter_tree() -> void:
 	SignalHub.on_character_clicked.connect(_on_character_clicked)
 	SignalHub.on_musume_clicked.connect(_on_musume_clicked)
 
-func _on_musume_clicked() -> void:
+func _ready() -> void:
+	Global.skill_setup()
+
+func _on_musume_clicked(character: Character) -> void:
+	
 	turns_left -= 1
 	story_label.text = "%d turns left until battle" % turns_left
+	
+	stat_label.text = "HP:%d\nEN:%d\nATK:%d\nDEF:%d\nMANA:%d\n" % [
+		character.cur_hp, character.energy, character.atk, character.def, character.mana
+	]
+	
 	if turns_left <= 0:
 		Global.pop_up()
 

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxm3s4b6ch80n"]
+[gd_scene load_steps=5 format=3 uid="uid://dxm3s4b6ch80n"]
 
 [ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Assets/Textures/Screenshot 2025-08-02 001149.png" id="1_qjfwr"]
 [ext_resource type="Texture2D" uid="uid://ddcnl5brlsv0a" path="res://Assets/Textures/Screenshot 2025-08-02 134929.png" id="2_nkfbh"]
-[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Assets/Textures/Screenshot 2025-05-22 211705.png" id="3_kaw7x"]
 [ext_resource type="Script" uid="uid://e1cg1h0u5tib" path="res://Scripts/Battle/SkillEdit.gd" id="4_55vdt"]
-[ext_resource type="LabelSettings" path="res://Resources/Skillname.tres" id="4_kaw7x"]
+[ext_resource type="LabelSettings" uid="uid://b8401s27ryjpf" path="res://Resources/Skillname.tres" id="4_kaw7x"]
 
 [node name="TextureButton" type="TextureButton" node_paths=PackedStringArray("skill_name", "cost_label")]
 custom_minimum_size = Vector2(0, 30)
@@ -16,7 +15,6 @@ grow_vertical = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("1_qjfwr")
 texture_pressed = ExtResource("2_nkfbh")
-texture_hover = ExtResource("3_kaw7x")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_55vdt")
