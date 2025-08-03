@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bsv5ubw1yhwbm"]
+[gd_scene load_steps=0 format=3 uid="uid://bsv5ubw1yhwbm"]
 
 [node name="SubViewportContainer" type="SubViewportContainer"]
 offset_right = 256.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhksfivwid2n0"]
 
 [ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Ucup/Screenshot 2025-08-02 001149.png" id="1_5yb1u"]
-[ext_resource type="Script" uid="uid://bc2bmutrle288" path="res://Scripts/UmaMusumeButton.gd" id="2_om3q0"]
+[ext_resource type="Script" uid="uid://bc2bmutrle288" path="res://Scripts/Misc/UmaMusumeButton.gd" id="2_om3q0"]
 
 [node name="TextureButton" type="TextureButton"]
 custom_minimum_size = Vector2(50, 50)
