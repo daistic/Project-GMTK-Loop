@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://k0hu1agupycm"]
+
+[ext_resource type="Script" uid="uid://blrckn2cmu4c6" path="res://Scripts/Battle/SkillScroll.gd" id="1_0u7hp"]
+[ext_resource type="PackedScene" uid="uid://dc7rym1bsnw6c" path="res://Scenes/ui base/skillloop.tscn" id="1_3l2vg"]
+
+[node name="ScrollContainer" type="ScrollContainer" node_paths=PackedStringArray("container")]
+custom_minimum_size = Vector2(0, 300)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0u7hp")
+LSkill = ExtResource("1_3l2vg")
+container = NodePath("VBoxContainer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 3
+alignment = 1

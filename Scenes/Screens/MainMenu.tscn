@@ -1,0 +1,141 @@
+[gd_scene load_steps=6 format=3 uid="uid://dna36yr73bjn0"]
+
+[ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Assets/Textures/Screenshot 2025-08-02 001149.png" id="1_a1jv6"]
+[ext_resource type="Script" uid="uid://d2qud85tqbmim" path="res://Scripts/Misc/MainMenu.gd" id="1_f35bi"]
+[ext_resource type="FontFile" uid="uid://br3p57tef348l" path="res://Assets/Font Asset/Roboto_Condensed-Black.ttf" id="2_f35bi"]
+[ext_resource type="LabelSettings" uid="uid://cxitxq60d3cta" path="res://Resources/Black_35.tres" id="3_441x2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8um5k"]
+font = ExtResource("2_f35bi")
+font_size = 72
+font_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f35bi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.310617, 0.310617, 0.310617, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_a1jv6")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Title" type="Label" parent="TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Game Name"
+label_settings = SubResource("LabelSettings_8um5k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 75
+
+[node name="SelectRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.587425, 0.504616, 0.299648, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_a1jv6")
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 75
+
+[node name="PlayButton" type="TextureButton" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/ButtonsContainer"]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_a1jv6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/ButtonsContainer/PlayButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/ButtonsContainer/PlayButton/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play"
+label_settings = ExtResource("3_441x2")
+
+[node name="CreditButton" type="TextureButton" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/ButtonsContainer"]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_a1jv6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/ButtonsContainer/CreditButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/ButtonsContainer/CreditButton/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Credits?"
+label_settings = ExtResource("3_441x2")
+
+[node name="QuitButton" type="TextureButton" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/ButtonsContainer"]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_a1jv6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/ButtonsContainer/QuitButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/ButtonsContainer/QuitButton/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quit"
+label_settings = ExtResource("3_441x2")
+
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/ButtonsContainer/PlayButton" to="." method="_on_play_button_pressed"]

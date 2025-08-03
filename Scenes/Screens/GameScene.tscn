@@ -1,0 +1,303 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx5sc3vfrsvvh"]
+
+[ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Assets/Textures/Screenshot 2025-08-02 001149.png" id="1_28646"]
+[ext_resource type="LabelSettings" uid="uid://cxitxq60d3cta" path="res://Resources/Black_35.tres" id="2_5iq2x"]
+[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Assets/Textures/Screenshot 2025-05-22 211705.png" id="3_ieqc6"]
+[ext_resource type="PackedScene" uid="uid://dhksfivwid2n0" path="res://Scenes/Misc/UmaMusumeButton.tscn" id="4_n715t"]
+
+[node name="GameScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+modulate = Color(0.332881, 0.332881, 0.332881, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_28646")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameSide" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/GameSide"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/GameSide/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HPContainer" type="HBoxContainer" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/HPContainer"]
+layout_mode = 2
+text = "HP"
+label_settings = ExtResource("2_5iq2x")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/HPContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_bottom = 35
+texture_progress = ExtResource("1_28646")
+
+[node name="EnergyContainer" type="HBoxContainer" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/EnergyContainer"]
+layout_mode = 2
+text = "EN"
+label_settings = ExtResource("2_5iq2x")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/EnergyContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_bottom = 35
+texture_progress = ExtResource("1_28646")
+
+[node name="Spacer" type="Control" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="GameScreen" type="TextureRect" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer"]
+self_modulate = Color(0.321241, 0.290906, 0.201593, 1)
+custom_minimum_size = Vector2(625, 325)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("1_28646")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_ieqc6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_ieqc6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_ieqc6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Spacer2" type="Control" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="TrainContainer" type="HBoxContainer" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 75
+
+[node name="ATKButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/TrainContainer" instance=ExtResource("4_n715t")]
+layout_mode = 2
+
+[node name="DEFButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/TrainContainer" instance=ExtResource("4_n715t")]
+layout_mode = 2
+button_action = 1
+
+[node name="HPButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/TrainContainer" instance=ExtResource("4_n715t")]
+layout_mode = 2
+button_action = 2
+
+[node name="MPButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/TrainContainer" instance=ExtResource("4_n715t")]
+layout_mode = 2
+button_action = 3
+
+[node name="Spacer3" type="Control" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="HealContainer" type="HBoxContainer" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 75
+
+[node name="HealButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/HealContainer" instance=ExtResource("4_n715t")]
+layout_mode = 2
+button_action = 4
+
+[node name="RestButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/HealContainer" instance=ExtResource("4_n715t")]
+layout_mode = 2
+button_action = 5
+
+[node name="TextSide" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextSide"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TextSide/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="StatsRect" type="TextureRect" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer"]
+self_modulate = Color(0.683789, 0.456094, 0.392908, 1)
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_28646")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StatsRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StatsRect/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StatsRect/MarginContainer/ScrollContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "HP: 
+EN: 
+ATK: 
+DEF: 
+MP: "
+label_settings = ExtResource("2_5iq2x")
+autowrap_mode = 2
+
+[node name="StoryRect" type="TextureRect" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer"]
+self_modulate = Color(0.221917, 0.443696, 0.442796, 1)
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_28646")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StoryRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StoryRect/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StoryRect/MarginContainer/ScrollContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "X Turns Left Until
+
+Once Upon A time lorenIpsoun Donet i Know Right"
+label_settings = ExtResource("2_5iq2x")
+autowrap_mode = 2
+
+[node name="ExitButton" type="TextureButton" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_28646")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/ExitButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/ExitButton/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quit"
+label_settings = ExtResource("2_5iq2x")

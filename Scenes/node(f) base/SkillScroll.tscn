@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwxq126s7g84e"]
+
+[ext_resource type="Script" uid="uid://blrckn2cmu4c6" path="res://Scripts/Battle/SkillScroll.gd" id="1_sqwhw"]
+[ext_resource type="PackedScene" uid="uid://dp4deoyryx0ic" path="res://Scenes/node(f) base/LSkill.tscn" id="2_2vxjv"]
+
+[node name="skill scroll" type="Sprite2D"]
+script = ExtResource("1_sqwhw")
+LSkill = ExtResource("2_2vxjv")

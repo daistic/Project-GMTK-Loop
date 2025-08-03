@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://fhqa50xheul8"]
+
+[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Scripts/Classes/Character.gd" id="1_71xmh"]
+
+[node name="Tank" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_71xmh")

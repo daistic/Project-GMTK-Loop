@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Globals/global.gd"
 CharacterManager="*res://Globals/CharacterManager.gd"
 BattleManager="*res://Globals/BattleManager.gd"
+Global="*res://Globals/Global.gd"
 
 [display]
 
