@@ -36,6 +36,8 @@ func next_move():
 	for a in Skills:
 		a.moved()
 func take_damage(amount,pen):
-	hp-=amount*10/(def*(1-pen/100)+10)
+	cur_hp-=amount*10/(def*(1-pen/100)+10)
+	if cur_hp>hp:
+		cur_hp=hp
 	if hp<0:
 		alive=false
