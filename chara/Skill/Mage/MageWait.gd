@@ -1,6 +1,6 @@
 extends Skill
 func _ready() -> void:
-	mana_cost=-0
+	mana_cost=-10
 	skill_name="wait"
 func activate():
 	mana_cost=(Chara.mana-Chara.cur_mana)/10
