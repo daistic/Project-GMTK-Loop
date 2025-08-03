@@ -19,6 +19,7 @@ func _battle_start(chara:Array[Character],ienemy):
 	ori_chara=chara
 	for i in charas.size():
 		chara_tex[i].set_texture(charas[i].texture)
+		chara[i].cur_mana=chara[i].mana
 	enemy=ienemy
 	battling=true
 	while battling:
