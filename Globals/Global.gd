@@ -1,6 +1,10 @@
 extends Node
 signal force_skill_edit_reset()
-var chara:Array[Character]
+var chara:Array[Character] = [
+	Character.new(),
+	Character.new(),
+	Character.new()
+]
 var enemy:Enemy
 signal battle_popup(charas:Array[Character])
 func pop_up():

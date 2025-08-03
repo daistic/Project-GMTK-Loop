@@ -1,11 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bm66gjk0d254"]
+[gd_scene load_steps=2 format=3 uid="uid://bm66gjk0d254"]
 
 [ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Assets/Textures/Screenshot 2025-05-22 211705.png" id="1_cvkwk"]
-[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Scripts/Classes/Character.gd" id="1_mpkxc"]
-[ext_resource type="Script" uid="uid://cihkpss2aika3" path="res://Scripts/Skills/Base/ATK.gd" id="3_bpp8d"]
-[ext_resource type="Script" uid="uid://busvllwro2p0e" path="res://Scripts/Skills/Base/Wait.gd" id="4_0kppk"]
 
-[node name="knight" type="TextureRect" node_paths=PackedStringArray("Skills")]
+[node name="knight" type="TextureRect"]
 anchors_preset = -1
 anchor_right = 0.325
 anchor_bottom = 0.397
@@ -13,14 +10,3 @@ offset_right = -376.0
 offset_bottom = -245.84
 texture = ExtResource("1_cvkwk")
 stretch_mode = 4
-script = ExtResource("1_mpkxc")
-Skills = [NodePath("Node"), NodePath("Node2")]
-texture = ExtResource("1_cvkwk")
-
-[node name="Node" type="Node" parent="." node_paths=PackedStringArray("Chara")]
-script = ExtResource("3_bpp8d")
-Chara = NodePath("..")
-
-[node name="Node2" type="Node" parent="." node_paths=PackedStringArray("Chara")]
-script = ExtResource("4_0kppk")
-Chara = NodePath("..")

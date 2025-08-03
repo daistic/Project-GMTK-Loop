@@ -1,5 +1,5 @@
 extends Node
 
-var Character1: Character = Character.new()
-var Character2: Character = Character.new()
-var Character3: Character = Character.new()
+const KNIGHT_ATLAS: AtlasTexture = preload("res://Resources/CharacterAtlas/Knight.tres")
+const MAGE_ATLAS: AtlasTexture = preload("res://Resources/CharacterAtlas/Mage.tres")
+const TANK_ATLAS: AtlasTexture = preload("res://Resources/CharacterAtlas/Tank.tres")

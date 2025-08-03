@@ -49,7 +49,7 @@ theme_override_constants/separation = 30
 [node name="Title" type="Label" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Game Name"
+text = "Loop Heroes"
 label_settings = SubResource("LabelSettings_8um5k")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
@@ -63,7 +63,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("1_a1jv6")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect"]
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,14 +71,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CharacterSelect" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/HBoxContainer" instance=ExtResource("4_441x2")]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 75
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Choose Your Party Members"
+label_settings = ExtResource("3_441x2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="CharacterSelect" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("4_441x2")]
 layout_mode = 2
 
-[node name="CharacterSelect2" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/HBoxContainer" instance=ExtResource("4_441x2")]
+[node name="CharacterSelect2" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("4_441x2")]
 layout_mode = 2
 selection_index = 1
 
-[node name="CharacterSelect3" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/HBoxContainer" instance=ExtResource("4_441x2")]
+[node name="CharacterSelect3" parent="TextureRect/MarginContainer/VBoxContainer/HBoxContainer/SelectRect/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("4_441x2")]
 layout_mode = 2
 selection_index = 2
 
