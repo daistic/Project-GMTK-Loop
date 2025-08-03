@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://d12luqnupfr5b"]
 
 [ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Ucup/Screenshot 2025-05-22 211705.png" id="1_wa5vi"]
-[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Battle Script/Chara/Character.gd" id="2_wfnr8"]
-[ext_resource type="Script" uid="uid://vxpy2qefguti" path="res://Battle Script/Skill/SKnightSlash.gd" id="3_px5sl"]
+[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://chara/Character.gd" id="2_wfnr8"]
+[ext_resource type="Script" uid="uid://vxpy2qefguti" path="res://chara/Skill/Knight/SKnightSlash.gd" id="3_px5sl"]
 
 [node name="Characters" type="Node2D"]
 

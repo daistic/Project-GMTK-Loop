@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhfevpfkgtaq2"]
+[gd_scene load_steps=5 format=3 uid="uid://bhfevpfkgtaq2"]
 
 [ext_resource type="Script" uid="uid://5nwiim3sps4k" path="res://TheBattle.gd" id="1_4p0bh"]
 [ext_resource type="Texture2D" uid="uid://ddcnl5brlsv0a" path="res://Ucup/Screenshot 2025-08-02 134929.png" id="1_t7d2g"]
-[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Ucup/Screenshot 2025-05-22 211705.png" id="2_5g4dj"]
 [ext_resource type="Script" uid="uid://bool26hswiman" path="res://Enemy.gd" id="2_k410v"]
-[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Battle Script/Chara/Character.gd" id="4_4p0bh"]
+[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://chara/Character.gd" id="4_4p0bh"]
 
 [node name="The Battle" type="Control"]
 layout_mode = 3
@@ -35,7 +34,6 @@ theme_override_constants/separation = 69
 
 [node name="Enemy" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_5g4dj")
 stretch_mode = 5
 script = ExtResource("2_k410v")
 

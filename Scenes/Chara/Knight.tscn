@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://b6xanuf3dj8yr"]
 
 [ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Ucup/Screenshot 2025-05-22 211705.png" id="1_na76r"]
-[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Battle Script/Chara/Character.gd" id="1_wglgy"]
-[ext_resource type="Script" uid="uid://cihkpss2aika3" path="res://Battle Script/Skill/ATK.gd" id="2_2vv28"]
-[ext_resource type="Script" uid="uid://busvllwro2p0e" path="res://Battle Script/Skill/Wait.gd" id="6_iq4yj"]
+[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://chara/Character.gd" id="1_wglgy"]
+[ext_resource type="Script" uid="uid://cihkpss2aika3" path="res://chara/Skill/ATK.gd" id="2_2vv28"]
+[ext_resource type="Script" uid="uid://busvllwro2p0e" path="res://chara/Skill/Wait.gd" id="6_iq4yj"]
 
 [node name="Knight" type="Sprite2D" node_paths=PackedStringArray("Skills")]
 texture = ExtResource("1_na76r")

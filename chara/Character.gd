@@ -11,7 +11,13 @@ var agro=1
 var cur_hp=1
 var cur_mana=1
 var tactic_loop:Array[int]
+var alive=true
 func _ready() -> void:
 	pass
 func add_skill(skill):
-	Skills.insert(Skills.size()-1,skill)
+	Skills.push_back(skill.new())
+	Skills[Skills.size()-1].Chara=self
+func next_move():
+	pass
+func take_damage(amount,pen):
+	pass
