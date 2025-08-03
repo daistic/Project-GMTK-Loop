@@ -1,8 +1,8 @@
-class_name Enemy
+class_name Enemy extends Node
 @export var texture:Texture2D
-var hp=1
-var atk=1
-var def=1
+@export var hp=1
+@export var atk=1
+@export var def=1
 var alive=true
 
 func next_move():

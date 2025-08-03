@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dmybo5ow8r51m"]
 
-[ext_resource type="Script" uid="uid://bool26hswiman" path="res://Scripts/Classes/Enemy.gd" id="1_0urgg"]
+[ext_resource type="Script" uid="uid://dpd8fm2diogpi" path="res://DarkLord.gd" id="1_0urgg"]
 
 [node name="Dark Lord" type="TextureRect"]
 offset_right = 40.0
