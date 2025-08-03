@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://u3rkiea538pd"]
 
-[ext_resource type="Script" uid="uid://bool26hswiman" path="res://Scripts/Classes/Enemy.gd" id="1_cl3ly"]
+[ext_resource type="Script" uid="uid://w2co8kamwaxx" path="res://Goblin.gd" id="1_cl3ly"]
 
 [node name="Goblin" type="TextureRect"]
 offset_right = 40.0
