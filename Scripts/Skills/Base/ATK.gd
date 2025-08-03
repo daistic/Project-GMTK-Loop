@@ -1,6 +1,6 @@
 extends Skill
 
-func _ready() -> void:
+func setstart() -> void:
 	skill_name = "ATK"
 
 func activate():

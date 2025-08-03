@@ -1,7 +1,7 @@
 extends Skill
 var duration=3
 var duration_left
-func _ready() -> void:
+func setstart() -> void:
 	skill_name="Prepare"
 	mana_cost=10
 func activate():

@@ -26,6 +26,7 @@ func _ready() -> void:
 func add_skill(skill):
 	Skills.push_back(skill.new())
 	Skills[Skills.size()-1].Chara=self
+	Skills[Skills.size()-1].setstart()
 func next_move():
 	if c_skill>tactic_loop.size()-1:
 		c_skill=0

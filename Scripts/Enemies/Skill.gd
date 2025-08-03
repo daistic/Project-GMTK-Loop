@@ -5,6 +5,8 @@ var mana_cost=0
 var req_atk=1
 var req_def=1
 var req_hp=1
+func setstart() -> void:
+	pass
 func activate():
 	pass
 func moved():

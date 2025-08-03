@@ -1,5 +1,5 @@
 extends Skill
-func _ready() -> void:
+func setstart() -> void:
 	skill_name="KnightSlash"
 	mana_cost=15
 func activate():
