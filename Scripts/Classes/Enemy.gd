@@ -7,6 +7,6 @@ var alive=true
 func next_move():
 	pass
 func take_damage(amount: float, pen: float = 0):
-	hp-=amount/(def/(100-pen)+10)
+	hp-=amount/(def*(1-pen/100)+10)
 	if hp<0:
 		alive=false

@@ -1,8 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://fhqa50xheul8"]
+[gd_scene load_steps=5 format=3 uid="uid://dcj6a1v3anpey"]
 
 [ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Scripts/Classes/Character.gd" id="1_71xmh"]
+[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Assets/Textures/Screenshot 2025-05-22 211705.png" id="1_cs14v"]
+[ext_resource type="Script" uid="uid://cihkpss2aika3" path="res://Scripts/Skills/Base/ATK.gd" id="2_8kprj"]
+[ext_resource type="Script" uid="uid://busvllwro2p0e" path="res://Scripts/Skills/Base/Wait.gd" id="3_cs14v"]
 
-[node name="Tank" type="TextureRect"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Tank" type="TextureRect" node_paths=PackedStringArray("Skills")]
+anchors_preset = -1
+anchor_right = 0.416
+anchor_bottom = 0.385
+offset_right = 0.52002
+offset_bottom = -0.200012
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cs14v")
+stretch_mode = 4
 script = ExtResource("1_71xmh")
+Skills = [NodePath("Node"), NodePath("Node2")]
+texture = ExtResource("1_cs14v")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_8kprj")
+
+[node name="Node2" type="Node" parent="."]
+script = ExtResource("3_cs14v")

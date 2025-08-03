@@ -11,6 +11,7 @@ var agro=1
 var cur_hp=1
 var cur_mana=1
 var tactic_loop:Array[int]
+var c_skill=0
 var alive=true
 func _ready() -> void:
 	pass
@@ -18,6 +19,16 @@ func add_skill(skill):
 	Skills.push_back(skill.new())
 	Skills[Skills.size()-1].Chara=self
 func next_move():
-	pass
+	if c_skill>tactic_loop.size()-1:
+		c_skill=0
+	if cur_mana>Skills[tactic_loop[c_skill]].mana_cost:
+		Skills[tactic_loop[c_skill]].activate()
+	else:
+		Skills[1].activate()
+	c_skill+=1
+	for a in Skills:
+		a.moved()
 func take_damage(amount,pen):
-	pass
+	hp-=amount*10/(def*(1-pen/100)+10)
+	if hp<0:
+		alive=false
