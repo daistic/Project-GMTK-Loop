@@ -10,7 +10,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_cvkwk")
 script = ExtResource("1_mpkxc")
-Skills = [NodePath("Node"), NodePath("Node2")]
+Skills = [null, null]
 texture = ExtResource("1_cvkwk")
 
 [node name="Node" type="Node" parent="." node_paths=PackedStringArray("Chara")]
