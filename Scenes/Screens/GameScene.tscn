@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cx5sc3vfrsvvh"]
 
-[ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Ucup/Screenshot 2025-08-02 001149.png" id="1_28646"]
+[ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Assets/Textures/Screenshot 2025-08-02 001149.png" id="1_28646"]
 [ext_resource type="LabelSettings" uid="uid://cxitxq60d3cta" path="res://Resources/Black_35.tres" id="2_5iq2x"]
-[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Ucup/Screenshot 2025-05-22 211705.png" id="3_ieqc6"]
+[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Assets/Textures/Screenshot 2025-05-22 211705.png" id="3_ieqc6"]
 [ext_resource type="PackedScene" uid="uid://dhksfivwid2n0" path="res://Scenes/Misc/UmaMusumeButton.tscn" id="4_n715t"]
 
 [node name="GameScene" type="Control"]

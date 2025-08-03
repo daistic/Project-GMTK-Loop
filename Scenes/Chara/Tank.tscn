@@ -1,9 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bncgw1o1lbade"]
+[gd_scene load_steps=2 format=3 uid="uid://fhqa50xheul8"]
 
-[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Ucup/Screenshot 2025-05-22 211705.png" id="1_6qik6"]
-[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Scripts/Classes/Character.gd" id="1_jfdcj"]
+[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Scripts/Classes/Character.gd" id="1_71xmh"]
 
-[node name="Tank" type="Sprite2D"]
-texture = ExtResource("1_6qik6")
-script = ExtResource("1_jfdcj")
-metadata/_custom_type_script = "uid://cgb6hj7dc7pf0"
+[node name="Tank" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_71xmh")

@@ -1,6 +1,6 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cxitxq60d3cta"]
 
-[ext_resource type="FontFile" uid="uid://br3p57tef348l" path="res://Roboto_Condensed-Black.ttf" id="1_1247e"]
+[ext_resource type="FontFile" uid="uid://br3p57tef348l" path="res://Assets/Font Asset/Roboto_Condensed-Black.ttf" id="1_1247e"]
 
 [resource]
 font = ExtResource("1_1247e")

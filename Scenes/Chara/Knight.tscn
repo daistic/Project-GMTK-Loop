@@ -1,26 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://b654pkv86bb3y"]
+[gd_scene load_steps=5 format=3 uid="uid://bm66gjk0d254"]
 
-[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Ucup/Screenshot 2025-05-22 211705.png" id="1_na76r"]
-<<<<<<< HEAD
-[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Scripts/Classes/Character.gd" id="1_wglgy"]
-[ext_resource type="Script" uid="uid://cihkpss2aika3" path="res://Scripts/Skills/Base/ATK.gd" id="2_2vv28"]
-[ext_resource type="Script" uid="uid://busvllwro2p0e" path="res://Scripts/Skills/Base/Wait.gd" id="6_iq4yj"]
-=======
-[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://chara/Character.gd" id="1_wglgy"]
-[ext_resource type="Script" uid="uid://cihkpss2aika3" path="res://chara/Skill/ATK.gd" id="2_2vv28"]
-[ext_resource type="Script" uid="uid://busvllwro2p0e" path="res://chara/Skill/Wait.gd" id="6_iq4yj"]
->>>>>>> origin/battle
+[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Assets/Textures/Screenshot 2025-05-22 211705.png" id="1_cvkwk"]
+[ext_resource type="Script" uid="uid://cgb6hj7dc7pf0" path="res://Scripts/Classes/Character.gd" id="1_mpkxc"]
+[ext_resource type="Script" uid="uid://cihkpss2aika3" path="res://Scripts/Skills/Base/ATK.gd" id="3_bpp8d"]
+[ext_resource type="Script" uid="uid://busvllwro2p0e" path="res://Scripts/Skills/Base/Wait.gd" id="4_0kppk"]
 
-[node name="Knight" type="Sprite2D" node_paths=PackedStringArray("Skills")]
-texture = ExtResource("1_na76r")
-script = ExtResource("1_wglgy")
-Skills = [NodePath("ATK"), NodePath("Wait")]
-metadata/_custom_type_script = "uid://cgb6hj7dc7pf0"
+[node name="knight" type="TextureRect" node_paths=PackedStringArray("Skills")]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_cvkwk")
+script = ExtResource("1_mpkxc")
+Skills = [NodePath("Node"), NodePath("Node2")]
+texture = ExtResource("1_cvkwk")
 
-[node name="ATK" type="Node" parent="." node_paths=PackedStringArray("Chara")]
-script = ExtResource("2_2vv28")
+[node name="Node" type="Node" parent="." node_paths=PackedStringArray("Chara")]
+script = ExtResource("3_bpp8d")
 Chara = NodePath("..")
 
-[node name="Wait" type="Node" parent="." node_paths=PackedStringArray("Chara")]
-script = ExtResource("6_iq4yj")
+[node name="Node2" type="Node" parent="." node_paths=PackedStringArray("Chara")]
+script = ExtResource("4_0kppk")
 Chara = NodePath("..")

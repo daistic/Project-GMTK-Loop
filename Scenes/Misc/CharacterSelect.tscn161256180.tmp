@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bfbmmbfdh0sa8"]
 
 [ext_resource type="Script" uid="uid://m6c0ciwqhqfy" path="res://Scripts/Misc/CharacterSelect.gd" id="1_u3s5t"]
-[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Assets/Textures/Screenshot 2025-05-22 211705.png" id="2_d1jle"]
-[ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Assets/Textures/Screenshot 2025-08-02 001149.png" id="3_61mdd"]
+[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Ucup/Screenshot 2025-05-22 211705.png" id="2_d1jle"]
+[ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Ucup/Screenshot 2025-08-02 001149.png" id="3_61mdd"]
 [ext_resource type="LabelSettings" uid="uid://cxitxq60d3cta" path="res://Resources/Black_35.tres" id="4_iwdky"]
 
 [node name="CharacterSelect" type="VBoxContainer"]

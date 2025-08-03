@@ -1,25 +1,23 @@
 class_name Character 
-
 extends Node
-
-enum TYPE {
-	KNIGHT,
-	MAGE,
-	TANKER
-}
-
-var atk: float = 1
-var def: float = 1
-var hp: float = 1
-var mp: float = 1
-var agro: float = 1
-var tactic_loop: Array[int]
-
-@export var type: TYPE = TYPE.KNIGHT
-@export var Skills: Array[Skill]
-
+@export var Skills:Array[Skill]
+@export var texture:Texture
+var type="normal"
+var atk=1
+var def=1
+var hp=1
+var mana=1
+var agro=1
+var cur_hp=1
+var cur_mana=1
+var tactic_loop:Array[int]
+var alive=true
 func _ready() -> void:
-	Skills.append_array(Global.BASE_SKILLS)
-
-func add_skill(skill: Skill) -> void:
-	Skills.insert(Skills.size() - 1, skill)
+	pass
+func add_skill(skill):
+	Skills.push_back(skill.new())
+	Skills[Skills.size()-1].Chara=self
+func next_move():
+	pass
+func take_damage(amount,pen):
+	pass

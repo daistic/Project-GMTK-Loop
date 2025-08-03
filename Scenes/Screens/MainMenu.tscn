@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dna36yr73bjn0"]
 
-[ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Ucup/Screenshot 2025-08-02 001149.png" id="1_a1jv6"]
+[ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Assets/Textures/Screenshot 2025-08-02 001149.png" id="1_a1jv6"]
 [ext_resource type="Script" uid="uid://d2qud85tqbmim" path="res://Scripts/Misc/MainMenu.gd" id="1_f35bi"]
-[ext_resource type="FontFile" uid="uid://br3p57tef348l" path="res://Roboto_Condensed-Black.ttf" id="2_f35bi"]
+[ext_resource type="FontFile" uid="uid://br3p57tef348l" path="res://Assets/Font Asset/Roboto_Condensed-Black.ttf" id="2_f35bi"]
 [ext_resource type="LabelSettings" uid="uid://cxitxq60d3cta" path="res://Resources/Black_35.tres" id="3_441x2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8um5k"]

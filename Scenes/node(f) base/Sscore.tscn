@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://ksqww8qt772t"]
+
+[ext_resource type="Script" uid="uid://blrckn2cmu4c6" path="res://Scripts/Battle/SkillScroll.gd" id="1_v0t2w"]
+[ext_resource type="PackedScene" uid="uid://dp4deoyryx0ic" path="res://Scenes/node(f) base/LSkill.tscn" id="2_v811h"]
+
+[sub_resource type="Theme" id="Theme_iifgw"]
+
+[sub_resource type="Gradient" id="Gradient_sgeto"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_63hfw"]
+gradient = SubResource("Gradient_sgeto")
+
+[node name="SkillScore" type="Node"]
+script = ExtResource("1_v0t2w")
+LSkill = ExtResource("2_v811h")
+metadata/_custom_type_script = "uid://blrckn2cmu4c6"
+
+[node name="Button" type="Button" parent="."]
+offset_left = -128.0
+offset_top = -1.0
+offset_right = 136.0
+offset_bottom = 30.0
+text = "Add"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = -1
+anchor_left = -125.0
+anchor_top = 66.0
+anchor_right = -125.0
+anchor_bottom = 66.0
+offset_right = 256.0
+offset_bottom = 317.0
+theme = SubResource("Theme_iifgw")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="ScrollContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(256, 317)
+render_target_update_mode = 4
+
+[node name="list" type="Sprite2D" parent="."]
+position = Vector2(4.62497, 222.375)
+scale = Vector2(4.07422, 5.01953)
+texture = SubResource("GradientTexture2D_63hfw")
