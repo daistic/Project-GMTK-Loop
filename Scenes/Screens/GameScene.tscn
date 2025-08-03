@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx5sc3vfrsvvh"]
+[gd_scene load_steps=12 format=3 uid="uid://cx5sc3vfrsvvh"]
 
+[ext_resource type="Script" uid="uid://ko6bmyhc5piv" path="res://Scripts/Misc/GameScene.gd" id="1_5iq2x"]
 [ext_resource type="Texture2D" uid="uid://c8gvxv54ldop4" path="res://Assets/Textures/Screenshot 2025-08-02 001149.png" id="1_28646"]
 [ext_resource type="LabelSettings" uid="uid://cxitxq60d3cta" path="res://Resources/Black_35.tres" id="2_5iq2x"]
-[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Assets/Textures/Screenshot 2025-05-22 211705.png" id="3_ieqc6"]
+[ext_resource type="PackedScene" uid="uid://lww55f3sv47b" path="res://Scenes/Misc/GameCharaButton.tscn" id="3_5iq2x"]
 [ext_resource type="PackedScene" uid="uid://dhksfivwid2n0" path="res://Scenes/Misc/UmaMusumeButton.tscn" id="4_n715t"]
+[ext_resource type="Texture2D" uid="uid://ijv61jeyd2rd" path="res://Assets/Textures/Attack.png" id="6_ii0cj"]
+[ext_resource type="Texture2D" uid="uid://wb7sbqq1ya1y" path="res://Assets/Textures/Defense.png" id="7_qivhw"]
+[ext_resource type="Texture2D" uid="uid://81pt2dslbcil" path="res://Assets/Textures/HP.png" id="8_1lhtn"]
+[ext_resource type="Texture2D" uid="uid://jgwsvngj63rt" path="res://Assets/Textures/MP.png" id="9_pdgur"]
+[ext_resource type="Texture2D" uid="uid://c0xg6x55s2l33" path="res://Assets/Textures/Heal.png" id="10_bqw5c"]
+[ext_resource type="Texture2D" uid="uid://b322n6blb6s6n" path="res://Assets/Textures/Rest.png" id="11_ld4rh"]
 
 [node name="GameScene" type="Control"]
 layout_mode = 3
@@ -13,6 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+script = ExtResource("1_5iq2x")
 
 [node name="BackgroundTexture" type="TextureRect" parent="."]
 modulate = Color(0.332881, 0.332881, 0.332881, 1)
@@ -61,7 +69,7 @@ layout_mode = 2
 text = "HP"
 label_settings = ExtResource("2_5iq2x")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/HPContainer"]
+[node name="HPBar" type="TextureProgressBar" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/HPContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -79,7 +87,7 @@ layout_mode = 2
 text = "EN"
 label_settings = ExtResource("2_5iq2x")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/EnergyContainer"]
+[node name="EnergyBar" type="TextureProgressBar" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/EnergyContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -117,32 +125,16 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 50
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 150)
+[node name="TextureButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen/MarginContainer/HBoxContainer" instance=ExtResource("3_5iq2x")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("3_ieqc6")
-ignore_texture_size = true
-stretch_mode = 0
 
-[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 150)
+[node name="TextureButton2" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen/MarginContainer/HBoxContainer" instance=ExtResource("3_5iq2x")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("3_ieqc6")
-ignore_texture_size = true
-stretch_mode = 0
+character_button_index = 1
 
-[node name="TextureButton3" type="TextureButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 150)
+[node name="TextureButton3" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/GameScreen/MarginContainer/HBoxContainer" instance=ExtResource("3_5iq2x")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("3_ieqc6")
-ignore_texture_size = true
-stretch_mode = 0
+character_button_index = 2
 
 [node name="Spacer2" type="Control" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 5)
@@ -156,17 +148,25 @@ theme_override_constants/separation = 75
 
 [node name="ATKButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/TrainContainer" instance=ExtResource("4_n715t")]
 layout_mode = 2
+disabled = true
+texture_normal = ExtResource("6_ii0cj")
 
 [node name="DEFButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/TrainContainer" instance=ExtResource("4_n715t")]
 layout_mode = 2
+disabled = true
+texture_normal = ExtResource("7_qivhw")
 button_action = 1
 
 [node name="HPButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/TrainContainer" instance=ExtResource("4_n715t")]
 layout_mode = 2
+disabled = true
+texture_normal = ExtResource("8_1lhtn")
 button_action = 2
 
 [node name="MPButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/TrainContainer" instance=ExtResource("4_n715t")]
 layout_mode = 2
+disabled = true
+texture_normal = ExtResource("9_pdgur")
 button_action = 3
 
 [node name="Spacer3" type="Control" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer"]
@@ -181,10 +181,14 @@ theme_override_constants/separation = 75
 
 [node name="HealButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/HealContainer" instance=ExtResource("4_n715t")]
 layout_mode = 2
+disabled = true
+texture_normal = ExtResource("10_bqw5c")
 button_action = 4
 
 [node name="RestButton" parent="HBoxContainer/GameSide/MarginContainer/VBoxContainer/HealContainer" instance=ExtResource("4_n715t")]
 layout_mode = 2
+disabled = true
+texture_normal = ExtResource("11_ld4rh")
 button_action = 5
 
 [node name="TextSide" type="Control" parent="HBoxContainer"]
@@ -232,7 +236,7 @@ theme_override_constants/margin_bottom = 10
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StatsRect/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StatsRect/MarginContainer/ScrollContainer"]
+[node name="StatLabel" type="Label" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StatsRect/MarginContainer/ScrollContainer"]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -268,18 +272,17 @@ theme_override_constants/margin_bottom = 10
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StoryRect/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StoryRect/MarginContainer/ScrollContainer"]
+[node name="StoryLabel" type="Label" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/StoryRect/MarginContainer/ScrollContainer"]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-text = "X Turns Left Until
-
-Once Upon A time lorenIpsoun Donet i Know Right"
+text = "15 Turns Left Until Battle"
 label_settings = ExtResource("2_5iq2x")
 autowrap_mode = 2
 
-[node name="ExitButton" type="TextureButton" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer"]
+[node name="BattleButton" type="TextureButton" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(350, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -288,7 +291,7 @@ texture_normal = ExtResource("1_28646")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/ExitButton"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/BattleButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -296,7 +299,30 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/ExitButton/MarginContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/BattleButton/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Battle"
+label_settings = ExtResource("2_5iq2x")
+
+[node name="ExitButton2" type="TextureButton" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_28646")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/ExitButton2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/TextSide/MarginContainer/VBoxContainer/ExitButton2/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Quit"

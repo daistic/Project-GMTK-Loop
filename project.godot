@@ -21,6 +21,7 @@ CharacterManager="*res://Globals/CharacterManager.gd"
 BattleManager="*res://Globals/BattleManager.gd"
 Global="*res://Globals/Global.gd"
 GameManager="*res://Globals/GameManager.gd"
+SignalHub="*res://Globals/SignalHub.gd"
 
 [display]
 
