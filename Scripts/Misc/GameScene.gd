@@ -32,14 +32,19 @@ func _on_musume_clicked(character: Character) -> void:
 		character.cur_hp, character.energy, character.atk, character.def, character.mana
 	]
 	
+	_update_bars(character)
+	
 	if turns_left <= 0:
 		Global.pop_up()
 
 func _on_character_clicked(character: Character) -> void:
-	hp_bar.value = character.cur_hp
-	energy_bar.value = character.energy
+	_update_bars(character)
 	for buttons in musume_button:
 		buttons.disabled = false
 	stat_label.text = "HP:%d\nEN:%d\nATK:%d\nDEF:%d\nMANA:%d\n" % [
 		character.cur_hp, character.energy, character.atk, character.def, character.mana
 	]
+
+func _update_bars(character: Character) -> void:
+	hp_bar.value = character.cur_hp
+	energy_bar.value = character.energy
