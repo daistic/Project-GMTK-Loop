@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://jy3hbjqd0tmd" path="res://icon.svg" id="3_3n8dk"]
 [ext_resource type="FontFile" uid="uid://br3p57tef348l" path="res://Assets/Font Asset/Roboto_Condensed-Black.ttf" id="4_limk6"]
 [ext_resource type="PackedScene" uid="uid://k0hu1agupycm" path="res://Scenes/ui base/scroll_container.tscn" id="5_baa8a"]
-[ext_resource type="Texture2D" uid="uid://cn6fpghaepx4r" path="res://Assets/Textures/Screenshot 2025-05-22 211705.png" id="6_3n8dk"]
+[ext_resource type="Texture2D" uid="uid://cwflcujwa1xoj" path="res://Assets/Textures/Arrow.png" id="6_4n5la"]
 [ext_resource type="Texture2D" uid="uid://ddcnl5brlsv0a" path="res://Assets/Textures/Screenshot 2025-08-02 134929.png" id="7_limk6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5ovle"]
@@ -133,7 +133,7 @@ offset_top = 482.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("6_3n8dk")
+texture_normal = ExtResource("6_4n5la")
 texture_pressed = ExtResource("2_g62ib")
 texture_hover = ExtResource("7_limk6")
 ignore_texture_size = true
