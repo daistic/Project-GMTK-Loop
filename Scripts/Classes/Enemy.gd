@@ -1,4 +1,4 @@
-class_name Enemy
+class_name Enemy extends Node
 @export var texture:Texture2D
 @export var hp=1
 @export var atk=1

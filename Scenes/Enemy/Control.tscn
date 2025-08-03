@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyd4h7libyof1"]
+
+[ext_resource type="PackedScene" uid="uid://bwnsd3fctr0oe" path="res://Scenes/ui base/before_b.tscn" id="1_4y2a4"]
+[ext_resource type="PackedScene" uid="uid://bhfevpfkgtaq2" path="res://Scenes/ui base/the_battle.tscn" id="2_1vpej"]
+[ext_resource type="PackedScene" uid="uid://cx5sc3vfrsvvh" path="res://Scenes/Screens/GameScene.tscn" id="3_y4plt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BeforeB" parent="." node_paths=PackedStringArray("not_battle", "battle") instance=ExtResource("1_4y2a4")]
+visible = false
+layout_mode = 1
+not_battle = NodePath("../GameScene")
+battle = NodePath("../The Battle")
+
+[node name="The Battle" parent="." instance=ExtResource("2_1vpej")]
+visible = false
+layout_mode = 1
+
+[node name="GameScene" parent="." instance=ExtResource("3_y4plt")]
+layout_mode = 1
